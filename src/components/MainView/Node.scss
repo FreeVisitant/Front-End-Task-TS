@@ -1,0 +1,100 @@
+.node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+  .node-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+
+    .node-name {
+      margin: 0 10px;
+      order: 2;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:nth-child(1) {
+        order: 1;
+        margin-right: auto;
+      }
+
+      &:nth-child(2), &:nth-child(3) {
+        order: 3;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .child-nodes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 10px;
+      width: 2px;
+      background-color: #ddd;
+    }
+  }
+
+  .child-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: black;
+    z-index: -1;
+  }
+
+  .child-nodes {
+    margin-left: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -10px;
+      width: 10px;
+      height: 100%;
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+    }
+
+    .child-node {
+      margin-top: 20px;
+    }
+  }
+}

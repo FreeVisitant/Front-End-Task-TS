@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +31,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centrado horizontal */
+  justify-content: center;  /* Centrado vertical */
+  height: 100vh;  /* Ocupa toda la altura del viewport */
+}
+
+/* Agregar transición para un zoom suave */
+.mainView {
+  transition: transform 0.3s ease;
 }

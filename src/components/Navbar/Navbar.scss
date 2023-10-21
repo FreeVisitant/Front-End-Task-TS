@@ -1,0 +1,82 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bccad7;
+    height: 100px;
+    padding: 0 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu-items {
+    display: flex;
+    gap: 20px;  // Ajusta según la distancia que desees entre los ítems del menú
+}
+
+.octagon {
+    display: inline-block;
+    width: 30px;  // Ajusta según el tamaño que necesites
+    height: 30px;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin-right: 10px;  // Espacio entre el octágono y el texto "Services"
+    text-align: center;
+    line-height: 30px;  // Centra verticalmente el texto dentro del octágono
+}
+.list-view-btn {
+    background-color: #3498db;  // Color azul
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px; 
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #2980b9;  // Un tono más oscuro de azul para el efecto hover
+    }
+}
+
+.center-btn {
+    background-color: #e74c3c;  // Color rojo
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;  // Espaciado entre botones
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #c0392b;  // Un tono más oscuro de rojo para el efecto hover
+    }
+}
+
+
+.zoom-out-btn, .zoom-in-btn {
+    background-color: #95a5a6;  // Color gris
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-left: 10px;  // Espaciado entre elementos
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #7f8c8d;  // Un tono más oscuro de gris para el efecto hover
+    }
+}
+
+.zoom-percentage {
+    margin-left: 10px;
+    font-size: 18px;
+    vertical-align: middle;
+}
